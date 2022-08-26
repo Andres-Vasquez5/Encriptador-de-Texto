@@ -14,21 +14,21 @@ function encriptar() {
       textoEncriptado[i] == "á" ||
       textoEncriptado[i] == "Á"
     ) {
-      textoEncriptado[i] = "enter";
+      textoEncriptado[i] = "ai";
     } else if (
       textoEncriptado[i] == "e" ||
       textoEncriptado[i] == "E" ||
       textoEncriptado[i] == "é" ||
       textoEncriptado[i] == "É"
     ) {
-      textoEncriptado[i] = "imes";
+      textoEncriptado[i] = "enter";
     } else if (
       textoEncriptado[i] == "i" ||
       textoEncriptado[i] == "I" ||
       textoEncriptado[i] == "í" ||
       textoEncriptado[i] == "Í"
     ) {
-      textoEncriptado[i] = "ai";
+      textoEncriptado[i] = "imes";
     } else if (
       textoEncriptado[i] == "o" ||
       textoEncriptado[i] == "O" ||
@@ -56,7 +56,7 @@ function desencriptar() {
     salida.style.backgroundImage = "none";
     var textoADesencriptar = textoAEncriptar.value;
     
-    var matriz = [["a", "enter"], ["e","imes"],["i", "ai"],["o","ober"], ["u","ufat"]];
+    var matriz = [["a", "ai"], ["e","enter"],["i", "imes"],["o","ober"], ["u","ufat"]];
     for (let i = 0; i < matriz.length; i++) {
         if (textoADesencriptar.includes(matriz[i][1])) {
             textoADesencriptar = textoADesencriptar.replaceAll(matriz[i][1], matriz[i][0])
